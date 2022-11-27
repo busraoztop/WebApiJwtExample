@@ -15,6 +15,8 @@ namespace WebApiJwtExample.Data
 
         DbSet<User> Users { get; set; }
 
+        DbSet<Invoice> Invoices { get; set; }
+
 
      
     }

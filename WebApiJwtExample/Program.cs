@@ -13,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<DatabaseContext>(options =>options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnestion")));
 
 builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IInvoiceService, InvoiceService>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
